@@ -1,7 +1,10 @@
-<form name='pinForm' ng-submit='createPin()'>
+<ul ng-if='errors'>
+  <li ng-repeat="error in errors">{{error}}</li>
+</ul>
+<form name='pinForm' ng-submit='createPin(pinParams)'>
 
   <div class="form-group">
-    <label for="item_name">Name: </label> 
+    <label for="item_name">Name: </label>
     <input type="text" name='item_name' ng-model='pinParams.item_name' class='form-control'>
   </div>
 
@@ -11,8 +14,8 @@
   </div>
 
   <div class="form-group">
-    <input type="radio" name='buy_or_sell' ng-model='pinParams.buy_or_sell' ng-value='true'> Buy  
-    <input type="radio" name='buy_or_sell' ng-model='pinParams.buy_or_sell' ng-value='false'> Sell
+    <input type="radio" name='buy_sell' ng-model='pinParams.buy_sell' ng-value='true'> Buy
+    <input type="radio" name='buy_sell' ng-model='pinParams.buy_sell' ng-value='false'> Sell
   </div>
 
   <div class="form-group">

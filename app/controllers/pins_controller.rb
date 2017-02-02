@@ -23,7 +23,7 @@ class PinsController < ApplicationController
       end
     else
       respond_to do |format|
-        format.json {render json: { errors:  @pin.errors.full_messages }}
+        format.json {render json: { errors:  @pin.errors.full_messages }, status: 422 }
       end
     end
   end

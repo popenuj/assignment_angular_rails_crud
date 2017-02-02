@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>AssignmentAngularRailsCrud</title>
     <%= csrf_meta_tags %>
@@ -9,9 +10,12 @@
   </head>
 
   <body>
-    <%= link_to 'Sign in', new_user_session_path %>
+    <% unless current_user %>
+      <%= link_to 'Sign in', new_user_session_path %>
+    <% end %>
     <div <%= content_for :angular_app %> >
       <%= yield %>
     </div>
   </body>
+
 </html>

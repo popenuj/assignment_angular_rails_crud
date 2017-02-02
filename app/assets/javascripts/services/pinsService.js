@@ -25,7 +25,8 @@ Pinboard.factory('pinsService', ['Restangular',
     }
 
     var create = function(params) {
-      Restangular.all('pins').post(params)
+      var pin = {pin: params}
+      return Restangular.all('pins').post(pin)
         .then(function() {
           getPins();
         })

@@ -13,8 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require angular
-//= require bootstrap/dist/js/bootstrap
+//= require bootstrap-sprockets
 //= require lodash/lodash
 //= require restangular/dist/restangular
 //= require ui-router/release/angular-ui-router
+//= require angular-devise
 //= require_tree .

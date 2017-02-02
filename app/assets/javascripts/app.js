@@ -20,7 +20,16 @@ Pinboard.config(function($stateProvider, $urlRouterProvider) {
             return pinsService.getPins();
           }
         }
-      }
-    )
+      })
+      .state('show', {
+        url: '/pins/:id',
+        templateUrl: 'templates/pins/show.html',
+        controller: 'PinShowCtrl',
+        resolve: {
+          pin: function(pinsService, $stateParams) {
+            return pinsService.getPin($stateParams.id);
+          }
+        }
+      })
   }
 )

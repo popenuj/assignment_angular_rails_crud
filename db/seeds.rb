@@ -16,8 +16,8 @@ NUM_USERS.times do |user|
     password_confirmation: "password"
   )
   new_user.pins.create(
-    item_name: "user #{new_user.id}'s item",
-    buy_sell: false,
+    item_name: "user #{new_user.id - 1}'s item",
+    buy_sell: [false, true].sample,
     description: LOREM
   )
 end

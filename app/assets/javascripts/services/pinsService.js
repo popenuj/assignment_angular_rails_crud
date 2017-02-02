@@ -5,8 +5,13 @@ Pinboard.factory('pinsService', ['Restangular',
       return Restangular.all('pins').getList().$object
     }
 
+    var getPin = function(id) {
+      return Restangular.one('pins', id).get().$object;
+    }
+
     return {
-      getPins: getPins
+      getPins: getPins,
+      getPin: getPin
     }
 
   }

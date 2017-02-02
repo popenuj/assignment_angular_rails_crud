@@ -1,0 +1,9 @@
+<h3><a>{{ pin.item_name }}</a></h3>
+<span ng-if="!pin.buy_sell" class="green-text">FOR SALE</span>
+<span ng-if="pin.buy_sell" class="red-text">WANT TO BUY</span>
+<br>
+<div><!-- toggle depending on current users ownership of pin.js -->
+  <a href="#">Edit Pin</a>   <a href="#">Delete Pin</a>
+</div>
+<p>{{ pin.description }}</p>
+<span class="pull-right">Posted {{ pin.created_at | date:'short' }} by {{ pin.user.username }}</span>

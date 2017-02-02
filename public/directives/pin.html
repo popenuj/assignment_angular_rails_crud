@@ -2,7 +2,7 @@
 <span ng-if="!pin.buy_sell" class="green-text">FOR SALE</span>
 <span ng-if="pin.buy_sell" class="red-text">WANT TO BUY</span>
 <br>
-<div><!-- toggle depending on current users ownership of pin.js -->
+<div ng-if="belongsToCurrentUser(pin)">
   <a href="#">Edit Pin</a>   <a href="#">Delete Pin</a>
 </div>
 <p>{{ pin.description }}</p>

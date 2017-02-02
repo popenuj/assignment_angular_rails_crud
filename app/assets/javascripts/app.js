@@ -1,4 +1,4 @@
-var Pinboard = angular.module('Pinboard', ['ui.router', 'restangular']);
+var Pinboard = angular.module('Pinboard', ['ui.router', 'restangular', 'Devise']);
 
 Pinboard.config(['RestangularProvider',
   function(RestangularProvider) {

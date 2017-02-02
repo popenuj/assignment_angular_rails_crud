@@ -18,14 +18,16 @@ Pinboard.config(function($stateProvider, $urlRouterProvider) {
         resolve: {
           pins: function(pinsService) {
             return pinsService.getPins();
-          }
+          },
+          pin: function() { return null }
         }
       })
       .state('show', {
         url: '/pins/:id',
         templateUrl: 'templates/pins/show.html',
-        controller: 'PinShowCtrl',
+        controller: 'PinsCtrl',
         resolve: {
+          pins: function() { return null },
           pin: function(pinsService, $stateParams) {
             return pinsService.getPin($stateParams.id);
           }

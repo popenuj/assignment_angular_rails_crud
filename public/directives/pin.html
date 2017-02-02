@@ -3,7 +3,7 @@
 <span ng-if="pin.buy_sell" class="red-text">WANT TO BUY</span>
 <br>
 <div ng-if="belongsToCurrentUser(pin)">
-  <a href="#">Edit Pin</a>   <a href="#">Delete Pin</a>
+  <a href="#">Edit Pin</a>   <a ng-click='destroyPin(pin)'>Delete Pin</a>
 </div>
 <p>{{ pin.description }}</p>
 <span class="pull-right">Posted {{ pin.created_at | date:'short' }} by {{ pin.user.username }}</span>
